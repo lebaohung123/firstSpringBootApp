@@ -1,5 +1,8 @@
 package com.example.demo.impl;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ColourPrint implements ColourPrinter{
 
     private RedPrinter redPrinter;
@@ -11,7 +14,7 @@ public class ColourPrint implements ColourPrinter{
     }
 
     @Override
-    public String  print() {
+    public String print() {
         return String.join(", ", redPrinter.print(), bluePrinter.print());
     }
 }
